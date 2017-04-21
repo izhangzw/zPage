@@ -10,13 +10,13 @@ require.config({
 		'jquery.tmpl': ['libs/tmpl/jquery.tmpl.min'],
 		'jquery.orgchart': ['libs/orgchart/jquery.jOrgChart'],
 		'jquery.dprange': ['libs/dprange/datepicker'],
-		'jquery.echarts': ['libs/echarts/echarts.min']
+		'jquery.echarts': ['libs/echarts/echarts.min'],
 	},
 	map: {
-        'jquery.dprange': {
-            'css': 'libs/amd/css.min'
-        }
-    },
+		'*': {
+			'css': 'libs/amd/css.min'
+		}
+	},
 	shim: {
 		'jquery.tmpl': ['jquery'],
 		'jquery.orgchart': ['jquery'],
@@ -32,4 +32,11 @@ require.config({
 		}
 	}
 })
+.onError = function (err) {
+    alert(err.requireType);
+    if (err.requireType === 'timeout') {
+        alert('modules: ' + err.requireModules);
+    }
 
+    throw err;
+};
