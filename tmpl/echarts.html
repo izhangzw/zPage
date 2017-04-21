@@ -1,0 +1,191 @@
+<div id="okrPie" style="height: 240px"></div>
+<div id="okrPie2" style="height: 240px"></div>
+<div id="okrBar" style="height: 575px"></div>
+<script>
+require(['jquery', 'util'], function($, util){
+	//工作任务的进度
+	util.Echart.pie('okrPie',{
+		legend: {
+			data: ['进度正常','即将逾期','已逾期']
+		},
+		series: [{
+			name:'工作任务比例',
+			data:[
+                {value:40, name:'进度正常'},
+                {value:1, name:'即将逾期'},
+                {value:2, name:'已逾期'}
+            ]
+		}]
+	})
+
+	//工作任务的完成度
+	util.Echart.pie('okrPie2',{
+		legend: {
+			data: ['已完成','未完成']
+		},
+		series: [{
+			name:'工作任务比例',
+			data:[
+                {value:12, name:'已完成'},
+                {value:0, name:'超时未完成'},
+                {value:43, name:'未完成'}
+            ]
+		}]
+	})
+})
+</script>
+/*$(function() {
+
+	//各部门的工作任务进度
+	var f = echarts.init(document.getElementById("okrBar"),'macarons'),
+		b = {
+		    legend: {
+		    	itemWidth: 15,
+		    	y:'bottom',
+		        data: ['进度正常', '即将逾期', '已逾期', '已完成']
+		    },
+		    grid: {
+		    	top: '0%',
+		        left: '0%',
+		        right: '2%',
+		        bottom: '5%',
+		        containLabel: true
+		    },
+		    xAxis:  {
+		        type: 'value',
+		         axisLabel:{
+		        	textStyle:{
+		        		color:'#666'
+		        	}
+		        },
+		        axisTick:{
+		        	lineStyle:{
+		        		color:'#666'
+		        	}
+		        },
+		        axisLine:{
+		        	lineStyle:{
+		        		color:'#666'
+		        	}
+		        }
+		       
+		    },
+		    yAxis: {
+		        type: 'category',
+		        axisLabel:{
+		        	textStyle:{
+		        		color:'#666'
+		        	}
+		        },
+		        axisLabel:{
+		        	interval: 0
+		        },
+		        axisTick:{
+		        	lineStyle:{
+		        		color:'#666'
+		        	}
+		        },
+		        axisLine:{
+		        	lineStyle:{
+		        		color:'#666'
+		        	}
+		        },
+		        data: ['办公室','党委办公室（党群工作部）','战略与法律事务部','规划技术部','市场经营部','集团客户部','数据部数据业务运营\n中心品质管理部',
+		        '网络部','工程建设部','信息技术中心','人力资源部','财务部','物资供应部','内审部','行政总务部','纪检监察室工会','客户服务中心',
+		        '信息系统集成运营中心','数字家庭运营中心','电子商务运营中心','游戏产品基地（中心）中国移动\n（淮安）呼叫中心基地项目筹备组',
+		        '网络与信息安全管理中心','中移在线']
+		    },
+		    series: [
+		        {
+		            name: '已逾期',
+		            type: 'bar',
+		            barWidth: '15',
+		            stack: '总量',
+		            label: {
+		                normal: {
+		                    show: true,
+			                textStyle: {
+		    					fontSize: '9'
+							}
+		                }
+		            },
+		            itemStyle: {
+						normal:{
+							color: '#ed5565'
+						}
+					},
+		            data: [8, 7, 10, 10, 3, 4, 6, 8, 7, 10, 10, 3, 4, 6, 8, 7, 10, 10, 3, 4, 6, 4, 8]
+		        },
+		        {
+		            name: '即将逾期',
+		            type: 'bar',
+		            barWidth: '15',
+		            stack: '总量',
+		            label: {
+		                normal: {
+		                    show: true,
+			                textStyle: {
+		    					fontSize: '9'
+							}
+		                },
+		            },
+		            itemStyle: {
+						normal:{
+							color: '#f8ac59'
+						}
+					},
+		            data: [14, 11, 10, 10, 5, 3, 5, 14, 11, 10, 10, 5, 3, 5, 14, 11, 10, 10, 5, 3, 5, 10, 15]
+		        },
+		        {
+		            name: '进度正常',
+		            type: 'bar',
+		            barWidth: '15',
+		            stack: '总量',
+		            label: {
+		                normal: {
+		                    show: true,
+			                textStyle: {
+		    					fontSize: '9'
+							}
+		                }
+		            },
+		            itemStyle: {
+						normal:{
+							color: '#22ac38'
+						}
+					},
+		            data: [6, 7, 3, 3, 12, 10, 10, 6, 7, 3, 3, 12, 10, 10, 6, 7, 3, 3, 12, 10, 10, 12, 8]
+		        },
+		        {
+		            name: '已完成',
+		            type: 'bar',
+		            barWidth: '15',
+		            stack: '总量',
+		            label: {
+		                normal: {
+		                    show: true,
+			                textStyle: {
+			    					fontSize: '9'
+								}
+			                }
+			            },
+			            itemStyle: {
+							normal:{
+								color: '#44a5e3'
+							}
+						},
+			            data: [20, 12, 15, 10, 14, 18, 16, 20, 12, 15, 10, 14, 18, 16, 20, 12, 15, 10, 14, 18, 16, 12, 18]
+			        }
+			    ]
+			};
+		f.on('click', function (){
+			location.href= 'company_dashboard_all_cockpit.html';
+	    });
+		f.setOption(b), $(window).resize(f.resize);
+		
+	
+
+});*/
+</script>
+	</body>
+</html>

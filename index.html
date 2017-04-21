@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1, user-scalable=no">
+    <!--<meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />-->
+    <title>江苏统一工作任务跟踪平台</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	    <script src="js/html5shiv.min.js"></script>
+	    <script src="js/respond.min.js"></script>
+	<![endif]-->
+    <link href="css/font-awesome.min93e3.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css" rel="stylesheet">
+    <style>
+    	ul{background-color: #006621;position: absolute;left: 0;top:0;width: 200px;bottom: 0;}
+    	#content-main{background-color: #F0F4F7;margin-left: 210px;}
+    </style>
+</head>
+
+<body >
+    <ul>
+    	<li>
+            <a href="#home">公司领导门户首页</a>
+        </li>
+        <li>
+            <a href="#mine">公司领导主驾驶舱</a>
+        </li>
+        <li>
+            <a href="#dp">datepicker range</a>
+        </li>
+        <li>
+            <a href="#echarts">echarts</a>
+        </li>
+        
+    </ul>
+       
+    <div class="row J_mainContent" id="content-main" zpage></div>
+	<script src="./js/libs/amd/require.js"></script>
+	<script src="./js/libs/amd/config.js"></script>
+<script>
+require(['jquery', 'moment', 'zPage'], function($, moment, zPage){
+	//if ("onhashchange" in window) alert("该浏览器支持hashchange事件!");
+	/*console.log(moment().format('YYYY-MM-DD'))
+	var day = +new Date()+100;
+	var dayWrapper = moment(day).fromNow();
+	console.log(dayWrapper)*/
+	
+	
+	//events
+	window.onhashchange = function(e){
+		//e = e || window.event;
+		zPage.init()
+	}
+	
+	$(function(){
+		zPage.init()
+	})
+	
+//明显模块使用requireJS, 普通逻辑按照之前方式来
+//二级模板使用jQuery.tmpl
+//模板间传参? 二级模板/
+//mockjs
+//版本号，压缩
+})
+</script>
+</body>
+
+</html>

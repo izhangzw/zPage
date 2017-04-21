@@ -1,0 +1,42 @@
+
+		<div id="wrapper">
+			<div id="page-wrapper" class="gray-bg">
+				<div class="wrapper wrapper-content index">
+					<div class="container-fluid">
+						
+						<div class="ovh">
+							<div class="btn-group m-b-sm switch pull-right">
+	                            <a class="btn btn-primary" href="#home/car">任务驾驶舱</a>
+	                            <a class="btn btn-white" href="#home/list">任务列表</a>
+	                        </div>
+						</div>
+						
+					</div>
+					
+					<div id="locations" zpage2></div>
+				</div>
+			</div>
+		</div>
+<script type="text/x-jquery-tmpl" id="car">
+	<h3>任务驾驶舱</h3>
+</script>
+<script type="text/x-jquery-tmpl" id="list">
+	<h3>任务列表</h3>
+</script>
+<script>
+	
+require(['jquery', 'util', 'zPage'], function($, util, zPage){
+	//var tmplName = zPage.tmpl2nd();//tmpl名
+	//var id = zPage.params('id');
+	/**
+	 * 参数1：指默认选择显示的模板ID
+	 * 参数2：模板加载到哪个标签下面, 默认[zpage2]
+	 */
+	zPage.fill('car')
+	
+	//page init
+	$(function(){
+	})
+})
+
+</script>
